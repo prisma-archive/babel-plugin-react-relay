@@ -1,0 +1,3 @@
+[submodule "relay"]
+	path = relay
+	url = git@github.com:facebook/relay.git

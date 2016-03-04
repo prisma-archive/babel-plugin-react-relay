@@ -12,5 +12,11 @@ $ npm install -D babel-plugin-react-relay
 Add the following to your `.babelrc` file.
 
 ```json
-
+{
+  "plugins": [
+    ["react-relay", {
+      "file": "./support/schema.json"
+    }]
+  ]
+}
 ```
