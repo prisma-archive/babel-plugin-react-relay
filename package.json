@@ -1,0 +1,30 @@
+{
+  "name": "babel-plugin-react-relay",
+  "version": "0.1.0",
+  "description": "Babel plugin for Relay (react-relay) with easy schema configuration in .babelrc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/graphcool/babel-plugin-react-relay.git"
+  },
+  "keywords": [
+    "relay",
+    "react",
+    "react-relay",
+    "graphql",
+    "babel",
+    "babelrc",
+    "schema",
+    "babel-plugin",
+    "plugin"
+  ],
+  "author": "Johannes Schickling <johannes@graph.cool>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/graphcool/babel-plugin-react-relay/issues"
+  },
+  "homepage": "https://github.com/graphcool/babel-plugin-react-relay#readme"
+}
