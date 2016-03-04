@@ -1,5 +1,5 @@
 # babel-plugin-react-relay [![npm version](https://badge.fury.io/js/babel-plugin-react-relay.svg)](https://badge.fury.io/js/babel-plugin-react-relay)
-Babel plugin for Relay (react-relay) with easy schema configuration in .babelrc
+Babel plugin for Relay `react-relay` with easy schema configuration in .babelrc
 
 ## Install
 
