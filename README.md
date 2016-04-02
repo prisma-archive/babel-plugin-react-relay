@@ -1,6 +1,10 @@
 # babel-plugin-react-relay [![npm version](https://badge.fury.io/js/babel-plugin-react-relay.svg)](https://badge.fury.io/js/babel-plugin-react-relay)
 Babel plugin for [Relay](https://github.com/facebook/relay) `react-relay` with support for multiple source types (`json`, `schema`, `url`)
 
+#### How does this relate to [babel-relay-plugin](https://www.npmjs.com/package/babel-relay-plugin)?
+
+This package uses `babel-relay-plugin` internaly but **makes usage more convenient** and extends its functionality. For example you no longer need to have a `build/babelRelayPlugin.js` script.
+
 ## Install
 
 ```sh
