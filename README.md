@@ -53,11 +53,13 @@ Sometimes you need the flexibility to dynamically configure your GraphQL schema 
 {
   "graphql": {
     "url": {
-    	"env": "SCHEMA_ENDPOINT" // uses $SCHEMA_ENDPOINT
+    	"env": "SCHEMA_ENDPOINT"
     }
   }
 }
 ```
+
+This example uses the `$SCHEMA_ENDPOINT` environment variable.
 
 ## License
 
