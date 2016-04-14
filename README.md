@@ -13,11 +13,23 @@ $ npm install -D babel-plugin-react-relay
 
 ## Configuration
 
+### Step 1: Add babel plugin
+
+Add the following to your `.babelrc` file or the corresponding babel configuration.
+
+```json
+{
+	"plugins": ["react-relay"]
+}
+```
+
+### Step 2: Configure source
+
 Add one the following source options to your `package.json` file.
 
-### Source Types
-
 #### JSON
+
+`json` imports an static GraphQL schema exported as a JSON file
 
 ```json
 {
@@ -27,22 +39,27 @@ Add one the following source options to your `package.json` file.
 }
 ```
 
-#### Schema
-
-```json
-{
-  "graphql": {
-    "schema": "./schema-definition.js"
-  }
-}
-```
 
 #### URL
+
+`url` is similar to `json` but expects the schema path to be an URL
 
 ```json
 {
   "graphql": {
     "url": "http://localhost:3000/schema.json"
+  }
+}
+```
+
+#### Schema
+
+`schema` expects a Javascript schema definition based on [graphql-js](https://github.com/graphql/graphql-js)
+
+```json
+{
+  "graphql": {
+    "schema": "./schema-definition.js"
   }
 }
 ```
