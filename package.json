@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-react-relay",
-  "version": "0.2.0",
+  "version": "0.8.0",
   "description": "Babel plugin for Relay (react-relay) with easy schema configuration in .babelrc",
   "main": "lib/index.js",
   "files": [
