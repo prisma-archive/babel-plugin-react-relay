@@ -6,20 +6,35 @@ import { loopWhile } from 'deasync'
 import request from 'sync-request'
 
 const packageJson = require(`${process.cwd()}/package.json`)
+const config = packageJson['react-relay-schema']
 
-const method = Object.keys(packageJson.graphql)[0]
-let value = packageJson.graphql[method]
+if (!config) {
+  throw new Error('\nNo relay schema configuration found in package.json.\nPlease provide a schema endpoint for the key "react-relay-schema"')
+}
 
-if (value !== null && typeof value === 'object') {
-  value = process.env[value.env]
+let source
+if (typeof config === 'object') {
+  source = process.env[config.env]
+} else {
+  source = config
+}
+
+let sourceType
+if (source.startsWith('http')) {
+  sourceType = 'url'
+} else if (source.endsWith('json')) {
+  sourceType = 'json'
+} else if (source.endsWith('js')) {
+  sourceType = 'schema'
+} else {
+  throw new Error('Invalid relay schema source')
 }
 
 let schemaData
-
-switch (method) {
+switch (sourceType) {
 
   case 'schema':
-    const schemaSource = require(resolve(value))
+    const schemaSource = require(resolve(source))
     let wait = true
 
     graphql(schemaSource, introspectionQuery)
@@ -34,13 +49,17 @@ switch (method) {
     break
 
   case 'json':
-    const schema = require(resolve(value))
+    const schema = require(resolve(source))
     schemaData = schema.data
 
     break
 
   case 'url':
-    const res = request('GET', value)
+    const res = request('GET', source)
+    if (res.statusCode !== 200) {
+      throw new Error(`Couldn't fetch schema from ${source}`)
+    }
+
     const result = JSON.parse(res.getBody())
     schemaData = result.data
 
@@ -50,7 +69,7 @@ switch (method) {
     throw new Error('Invalid method. Valid keys are `schema, json, url`')
 }
 
-console.log(`GraphQL successfully schema loaded from ${value}`)
+console.log(`\nRelay schema successfully loaded from ${source}`)
 
 export default function (babel) {
   if (schemaData) {

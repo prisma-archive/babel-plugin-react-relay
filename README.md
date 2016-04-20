@@ -1,5 +1,5 @@
 # babel-plugin-react-relay [![npm version](https://badge.fury.io/js/babel-plugin-react-relay.svg)](https://badge.fury.io/js/babel-plugin-react-relay)
-Babel plugin for [Relay](https://github.com/facebook/relay) `react-relay` with support for multiple source types (`json`, `schema`, `url`)
+Babel plugin for [Relay](https://github.com/facebook/relay)  with support for multiple source types
 
 #### How does this relate to [babel-relay-plugin](https://www.npmjs.com/package/babel-relay-plugin)?
 
@@ -23,44 +23,38 @@ Add the following to your `.babelrc` file or the corresponding babel configurati
 }
 ```
 
-### Step 2: Configure source
+### Step 2: Configure schema source
 
 Add one the following source options to your `package.json` file.
 
 #### JSON
 
-`json` imports an static GraphQL schema exported as a JSON file
+Imports a static GraphQL schema exported as a JSON file
 
 ```json
 {
-  "graphql": {
-    "json": "./exported-schema.json"
-  }
+  "react-relay-schema": "./exported-schema.json"
 }
 ```
 
 
 #### URL
 
-`url` is similar to `json` but expects the schema path to be an URL
+You can also provide an URL to a schema endpoint. Use this method if you're using [graph.cool](https://graph.cool/).
 
 ```json
 {
-  "graphql": {
-    "url": "http://localhost:3000/schema.json"
-  }
+  "react-relay-schema": "http://localhost:3000/schema.json"
 }
 ```
 
 #### Schema
 
-`schema` expects a Javascript schema definition based on [graphql-js](https://github.com/graphql/graphql-js)
+[graphql-js](https://github.com/graphql/graphql-js) schema definition are also supported.
 
 ```json
 {
-  "graphql": {
-    "schema": "./schema-definition.js"
-  }
+  "react-relay-schema": "./schema-definition.js"
 }
 ```
 
@@ -72,10 +66,8 @@ Sometimes you need the flexibility to dynamically configure your GraphQL schema 
 
 ```json
 {
-  "graphql": {
-    "url": {
-    	"env": "SCHEMA_ENDPOINT"
-    }
+  "react-relay-schema": {
+	"env": "SCHEMA_ENDPOINT"
   }
 }
 ```
