@@ -25,7 +25,7 @@ Add the following to your `.babelrc` file or the corresponding babel configurati
 
 ### Step 2: Configure schema source
 
-Add one the following source options to your `package.json` file.
+Add one of the following source options to your `package.json` file.
 
 #### JSON
 
@@ -40,7 +40,7 @@ Imports a static GraphQL schema exported as a JSON file
 
 #### URL
 
-You can also provide an URL to a schema endpoint. Use this method if you're using [graph.cool](https://graph.cool/).
+You can also provide a URL to a schema endpoint. Use this method if you're using [graph.cool](https://graph.cool/).
 
 ```json
 {
@@ -50,7 +50,7 @@ You can also provide an URL to a schema endpoint. Use this method if you're usin
 
 #### Schema
 
-[graphql-js](https://github.com/graphql/graphql-js) schema definition are also supported.
+[graphql-js](https://github.com/graphql/graphql-js) schema definition is also supported.
 
 ```json
 {
@@ -62,7 +62,7 @@ You can also provide an URL to a schema endpoint. Use this method if you're usin
 
 #### Environment Variables
 
-Sometimes you need the flexibility to dynamically configure your GraphQL schema source via environment variables. You can easily to that using the following syntax (works for all source types):
+Sometimes you need the flexibility to dynamically configure your GraphQL schema source via environment variables. You can easily do that using the following syntax (works for all source types):
 
 ```json
 {
