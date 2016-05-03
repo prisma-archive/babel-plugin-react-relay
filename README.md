@@ -3,7 +3,7 @@ Babel plugin for [Relay](https://github.com/facebook/relay)  with support for mu
 
 #### How does this relate to [babel-relay-plugin](https://www.npmjs.com/package/babel-relay-plugin)?
 
-This package uses `babel-relay-plugin` internaly but **makes usage more convenient** and extends its functionality. For example you no longer need to have a `build/babelRelayPlugin.js` script.
+This package uses `babel-relay-plugin` internally but **makes usage more convenient** and extends its functionality. For example you no longer need to have a `build/babelRelayPlugin.js` script.
 
 ## Install
 
