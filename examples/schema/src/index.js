@@ -42,5 +42,5 @@ ReactDOM.render(
     Component={HelloApp}
     route={new HelloRoute()}
   />,
-  document.body
+  document.getElementById('root')
 )
