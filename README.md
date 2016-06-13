@@ -77,3 +77,5 @@ This example uses the `$SCHEMA_ENDPOINT` environment variable.
 ## License
 
 [MIT License](http://opensource.org/licenses/MIT)
+
+![](http://i.imgur.com/5RHR6Ku.png)
