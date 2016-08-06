@@ -1,5 +1,5 @@
 # babel-plugin-react-relay [![npm version](https://badge.fury.io/js/babel-plugin-react-relay.svg)](https://badge.fury.io/js/babel-plugin-react-relay)
-Babel plugin for [Relay](https://github.com/facebook/relay)  with support for multiple source types
+Babel plugin for [Relay](https://github.com/facebook/relay) which works out of the box with your GraphQL endpoint
 
 #### How does this relate to [babel-relay-plugin](https://www.npmjs.com/package/babel-relay-plugin)?
 
