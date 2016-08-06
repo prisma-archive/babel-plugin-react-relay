@@ -5,6 +5,8 @@ Babel plugin for [Relay](https://github.com/facebook/relay)  with support for mu
 
 This package uses `babel-relay-plugin` internally but **makes usage more convenient** and extends its functionality. For example you no longer need to have a `build/babelRelayPlugin.js` script.
 
+(The version is the same as `babel-relay-plugin` by the way.)
+
 ## Install
 
 ```sh
@@ -13,7 +15,9 @@ $ npm install -D babel-plugin-react-relay
 
 ## Configuration
 
-### Step 1: Add babel plugin
+> Note: We recently switched over to [graphql-config](https://github.com/graphcool/graphql-config), so this might be a breaking change for you.
+
+### Step 1: Add plugin to `.babelrc`
 
 Add the following to your `.babelrc` file or the corresponding babel configuration.
 
@@ -23,56 +27,17 @@ Add the following to your `.babelrc` file or the corresponding babel configurati
 }
 ```
 
-### Step 2: Configure schema source
+### Step 2: Configure your GraphQL schema
 
-Add one of the following source options to your `package.json` file.
+This plugin uses the [graphql-config](https://github.com/graphcool/graphql-config) format and already works out of the box if you're using another GraphQL dev tool such as [this great IntelliJ Plugin](https://github.com/jimkyndemeyer/js-graphql-intellij-plugin).
 
-#### JSON
+Add one of the following source options to your `package.json` file. **See [here](https://github.com/graphcool/graphql-config#usage) for more configuration details.**
 
-Imports a static GraphQL schema exported as a JSON file
+For your convenience, here is the easiest way to configure your GraphQL endpoint:
 
-```json
-{
-  "react-relay-schema": "./exported-schema.json"
-}
+```sh
+export GRAPHQL_ENDPOINT="https://your.api/graphql"
 ```
-
-
-#### URL
-
-You can also provide a URL to a schema endpoint. Use this method if you're using [graph.cool](https://graph.cool/).
-
-```json
-{
-  "react-relay-schema": "http://localhost:3000/schema.json"
-}
-```
-
-#### Schema
-
-[graphql-js](https://github.com/graphql/graphql-js) schema definition is also supported.
-
-```json
-{
-  "react-relay-schema": "./schema-definition.js"
-}
-```
-
-### Options
-
-#### Environment Variables
-
-Sometimes you need the flexibility to dynamically configure your GraphQL schema source via environment variables. You can easily do that using the following syntax (works for all source types):
-
-```json
-{
-  "react-relay-schema": {
-	"env": "SCHEMA_ENDPOINT"
-  }
-}
-```
-
-This example uses the `$SCHEMA_ENDPOINT` environment variable.
 
 ## License
 
