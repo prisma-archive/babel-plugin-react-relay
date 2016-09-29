@@ -21,8 +21,13 @@ export default function (babel) {
   // TODO find a cleaner way to do this
   loopWhile(() => wait)
 
+  // this error could happen while downloading the schema
   if (error) {
     throw error
+  }
+
+  if (schema.errors) {
+    throw new Error(schema.errors)
   }
 
   if (schema.data) {
