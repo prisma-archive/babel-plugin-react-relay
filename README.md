@@ -39,6 +39,29 @@ For your convenience, here is the easiest way to configure your GraphQL endpoint
 export GRAPHQL_ENDPOINT="https://your.api/graphql"
 ```
 
+#### Graphql-js configuration style
+
+For those intending to directly reference their backend `schema.js`, you will need to ensure a single version of `graphql` exists in `node_modules`. However as of this writing, `babel-relay-plugin` and `graphql-config-parser` reference incompatible versions of `graphql` ([context](https://github.com/facebook/relay/issues/1400)). A workaround is to force the graphql dependency within `npm-shrinkwrap.json` at your project's root (make sure to adapt as currently relevant):
+
+```
+{
+  "dependencies": {
+    "babel-relay-plugin": {
+      "version": "0.9.3",
+      "from": "babel-relay-plugin@0.9.3",
+      "dependencies": {
+        "graphql": {
+          "version": "0.7.1",
+          "from": "graphql@0.6.2"
+        }
+      }
+    }
+  }
+}
+```
+
+Then run `npm prune`, `npm install` and `npm dedupe` for good measure.
+
 ## License
 
 [MIT License](http://opensource.org/licenses/MIT)
