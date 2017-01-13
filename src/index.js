@@ -27,7 +27,7 @@ export default function (babel) {
   }
 
   if (schema.errors) {
-    throw new Error(schema.errors)
+    throw new Error(JSON.stringify(schema.errors))
   }
 
   if (schema.data) {
