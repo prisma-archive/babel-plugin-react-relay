@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-react-relay",
-  "version": "0.9.3-3",
+  "version": "0.10.0",
   "description": "Babel plugin for Relay (react-relay) with easy schema configuration in .babelrc",
   "main": "lib/index.js",
   "files": [
@@ -39,8 +39,8 @@
     "babel-preset-es2015": "^6.16.0"
   },
   "dependencies": {
-    "babel-relay-plugin": "0.9.3",
+    "babel-relay-plugin": "^0.10.0",
     "deasync": "^0.1.7",
-    "graphql-config-parser": "1.1.3"
+    "graphql-config-parser": "^1.2.0"
   }
 }
