@@ -1,7 +1,7 @@
 # babel-plugin-react-relay [![npm version](https://badge.fury.io/js/babel-plugin-react-relay.svg)](https://badge.fury.io/js/babel-plugin-react-relay)
-Babel plugin for [Relay](https://github.com/facebook/relay) which works out of the box with your GraphQL endpoint
+Babel plugin for [Relay Classic](https://github.com/facebook/relay) which works out of the box with your GraphQL endpoint
 
-> **DEPRECATED**: Given the new `relay-compiler` setup this babel plugin is no longer necessary.
+> **DEPRECATED**: Given the new `relay-compiler` setup (for Relay Modern) this babel plugin is no longer necessary.
 
 #### How does this relate to [babel-relay-plugin](https://www.npmjs.com/package/babel-relay-plugin)?
 
