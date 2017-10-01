@@ -1,4 +1,6 @@
 # babel-plugin-react-relay [![npm version](https://badge.fury.io/js/babel-plugin-react-relay.svg)](https://badge.fury.io/js/babel-plugin-react-relay)
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/graphcool/babel-plugin-react-relay.svg)](https://greenkeeper.io/)
 Babel plugin for [Relay Classic](https://github.com/facebook/relay) which works out of the box with your GraphQL endpoint
 
 > **DEPRECATED**: Given the new `relay-compiler` setup (for Relay Modern) this babel plugin is no longer necessary.
